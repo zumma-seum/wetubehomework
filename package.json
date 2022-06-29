@@ -1,0 +1,28 @@
+{
+  "name": "20220628",
+  "version": "1.0.0",
+  "description": "wetube homework",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zumma-seum/wetubehomework.git"
+  },
+  "author": "cey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zumma-seum/wetubehomework/issues"
+  },
+  "homepage": "https://github.com/zumma-seum/wetubehomework#readme",
+  "dependencies": {
+    "@babel/preset-env": "^7.18.6",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@babel/node": "^7.18.6",
+    "nodemon": "^2.0.18"
+  }
+}
