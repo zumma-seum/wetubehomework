@@ -1,16 +1,16 @@
 import express from "express";
-import globalRouter from "./routers/globalRouter";
-import storyRouter from "./routers/storyRouter";
-import userRouter from "./routers/userRouter";
+import path from "path";
+import "./db";
+import movieRouter from "./movieRouter";
 
 const app = express();
-
 app.set("view engine", "pug");
-app.set("views", process.cwd() + "/src/views");
+app.set("views", path.join(__dirname, "views"));
+app.use("/", movieRouter);
 
-app.use("/", globalRouter);
-app.use("/users", userRouter);
-app.use("/stories", storyRouter);
 
-app.listen(4000, () => console.log(`Listening!`));
+// Codesanbox does not need PORT :)
+// app.listen(() => console.log(`✅  Server Ready!`));
 
+const handleListening = () => console.log(`server listening on port http://localhost:4000`);
+app.listen(4000, handleListening);
